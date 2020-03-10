@@ -51,15 +51,15 @@ public class MyLinkedList<E> {
 		Node  temp  =  getNode(index);//获取指定下标的元素
 		
 		if(temp!=null){
-			Node  up = temp.previous;
-			Node down = temp.next;
+			Node  up = temp.getPrevious();
+			Node down = temp.getNext();
 			
 			if(up!=null){
-				up.next = down;
+				up.setNext(down);
 			}
 			
 			if(down!=null){
-				down.previous = up;
+				down.setPrevious(up);
 			}
 			
 			//被删除的元素是第一个元素时
